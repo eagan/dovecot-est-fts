@@ -9,6 +9,6 @@ shift
 
 for uidlist in "$@"; do
     dir=`dirname ${uidlist}`
-    sed '1,$s|^\([^ ]*\) [^:]*:\(.*\)|'${dir}/cur/'\2	\1|' "$uidlist" | \
+    sed '1,$s|^\([^ ]*\) [^:]*:\(.*\)|'${dir}/cur/'\2	\1|' ${uidlist} | \
     estcmd gather -fm -px imap-uid ${casket} -
 done
